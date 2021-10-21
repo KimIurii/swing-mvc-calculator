@@ -11,7 +11,7 @@ public class Viewer {
         textField = initTextField();
 
         /*
-            Initialize first column of buttons
+            Initialize first column of buttons (digits)
          */
         JButton buttonSeven = new JButton("7");
         buttonSeven.setBounds(50, 50, 50, 50);
@@ -42,7 +42,7 @@ public class Viewer {
         buttonZero.setActionCommand("0");
 
         /*
-            Initialize second column of buttons
+            Initialize second column of buttons (digits)
         */
         JButton buttonEight = new JButton("8");
         buttonEight.setBounds(110, 50, 50, 50);
@@ -63,7 +63,7 @@ public class Viewer {
         buttonTwo.setFont(font);
         buttonTwo.setForeground(java.awt.Color.RED);
         buttonTwo.addActionListener(controller);
-        buttonTwo.setActionCommand("2");;
+        buttonTwo.setActionCommand("2");
 
         JButton buttonComma = new JButton(",");
         buttonComma.setBounds(110,230,50,50);
@@ -72,7 +72,7 @@ public class Viewer {
         buttonComma.addActionListener(controller);
         buttonComma.setActionCommand("Comma");
         /*
-            Initialize third column of buttons
+            Initialize third column of buttons(digits)
         */
         JButton buttonNine = new JButton("9");
         buttonNine.setBounds(170, 50, 50, 50);
@@ -95,7 +95,9 @@ public class Viewer {
         buttonThree.addActionListener(controller);
         buttonThree.setActionCommand("3");
 
-        //Equal
+        /*
+            Initialize third column of buttons
+        */
         JButton buttonEqual = new JButton("=");
         buttonEqual.setBounds(50,290,230,50);
         buttonEqual.setFont(font);
@@ -103,37 +105,36 @@ public class Viewer {
         buttonEqual.addActionListener(controller);
         buttonEqual.setActionCommand("Equal");
 
-        //Plus
         JButton buttonAddition = new JButton("+");
         buttonAddition.setBounds(230,50,50,50);
         buttonAddition.setForeground(Color.RED);
         buttonAddition.addActionListener(controller);
         buttonAddition.setActionCommand("Plus");
-        //Minus
+
         JButton buttonSubtraction = new JButton("-");
         buttonSubtraction.setBounds(230,110,50,50);
         buttonSubtraction.setForeground(Color.RED);
         buttonSubtraction.addActionListener(controller);
         buttonSubtraction.setActionCommand("Minus");
-        //Multiply
+
         JButton buttonMultiplication = new JButton("*");
         buttonMultiplication.setBounds(230,170,50,50);
         buttonMultiplication.setForeground(Color.RED);
         buttonMultiplication.addActionListener(controller);
         buttonMultiplication.setActionCommand("Multiply");
-        //Divide
+
         JButton buttonDivison = new JButton("/");
         buttonDivison.setBounds(230,230,50,50);
         buttonDivison.setForeground(Color.RED);
         buttonDivison.addActionListener(controller);
         buttonDivison.setActionCommand("Divide");
-        //Cancel
+
         JButton buttonCancel = new JButton(">>");
         buttonCancel.setBounds(1,10,45,30);
         buttonCancel.setFont(new Font("Bernard MT Condensed", Font.PLAIN, 5));
         buttonCancel.addActionListener(controller);
         buttonCancel.setActionCommand("Cancel");
-        //Pow
+
         JButton buttonPow = new JButton("^");
         buttonPow.setBounds(170, 230, 50, 50);
         buttonPow.setFont(font);
@@ -141,7 +142,9 @@ public class Viewer {
         buttonPow.addActionListener(controller);
         buttonPow.setActionCommand("Pow");
 
-
+        /*
+            Initialize JFrame and adding components
+        */
         JFrame frame = initJFrame();
         frame.add(textField);
         frame.add(buttonSeven);
